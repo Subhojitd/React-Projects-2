@@ -1,0 +1,79 @@
+Q.1 What are hooks in react? how to identify hooks?
+
+Hooks are a new feature in React that allow you to use state and other React features without writing a class. They are a way to make React code more concise and reusable.
+
+To identify hooks, you can look for the use keyword. All hooks start with the use keyword, followed by the name of the hook. For example, the useState hook is used to manage state in React.
+
+______________________________________________________________________________________________________________________
+
+
+Q.2 Explain useState Hook & what can you achieve with it?
+
+The useState hook is a hook that allows you to manage state in React. It takes an initial state value as an argument, and returns an array of two values: the current state value and a function that you can use to update the state.
+
+You can use the useState hook to achieve a variety of things, such as:
+
+Storing and updating the value of a single variable.
+Creating a counter that increments or decrements when a button is clicked.
+Keeping track of the selected item in a list.
+
+______________________________________________________________________________________________________________________
+
+Q.3 How to pass data from one component to another component
+
+There are two main ways to pass data from one component to another component in React:
+
+Using props: Props are read-only data that are passed from a parent component to a child component. To pass data using props, you define the data in the parent component and pass it to the child component as an attribute.
+Using context: Context is a way to share data between components without having to pass props down through the tree. To use context, you create a context object and then use the useContext hook to access the data in the context object from your components.
+
+______________________________________________________________________________________________________________________
+
+Q.4 What is the significance of the "key" prop in React lists, and why is it important to use it correctly?
+
+The key prop in React lists is used to identify the individual items in the list. This is important because it allows React to track the changes to the list and update the DOM accordingly. If you do not use the key prop, React will not be able to track the changes to the list and the DOM may not be updated correctly.
+
+______________________________________________________________________________________________________________________
+
+Q.5 What is the significance of using "setState" instead of modifying state directly in React?
+
+The setState function is used to update the state of a component in React. It takes an object as an argument, and the object can be used to specify the new state value for the component.
+
+It is important to use setState instead of modifying state directly because setState is a more efficient way to update state. When you modify state directly, React has to re-render the entire component. However, when you use setState, React only re-renders the parts of the component that need to be updated.
+______________________________________________________________________________________________________________________
+
+Q.6 Explain the concept of React fragments and when you should use them.
+
+React fragments are a way to group multiple elements together without creating a new component. They are useful when you want to render multiple elements without having to give them all unique IDs.
+
+You should use React fragments when you want to:
+
+Render multiple elements without having to give them all unique IDs.
+Improve the performance of your React app by reducing the number of components that are rendered.
+
+______________________________________________________________________________________________________________________
+
+Q.7 How do you handle conditional rendering in React?
+
+Conditional rendering is a way to render different parts of a component based on a condition. You can use conditional rendering to:
+
+Show or hide different parts of a component based on the value of a prop or state variable.
+Render different components based on the value of a prop or state variable.
+To handle conditional rendering in React, you can use the if statement or the ternary operator.
+
+Here are some examples of how to use conditional rendering in React:
+
+const MyComponent = ({ showName }) => {
+  if (showName) {
+    return <h1>My name is Bard</h1>;
+  } else {
+    return <h1>My name is hidden</h1>;
+  }
+};
+const MyComponent = ({ showName }) => {
+  return (
+    <h1>
+      {showName ? "My name is Bard" : "My name is hidden"}
+    </h1>
+  );
+};
+______________________________________________________________________________________________________________________
